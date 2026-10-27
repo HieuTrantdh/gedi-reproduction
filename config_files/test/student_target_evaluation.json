@@ -1,0 +1,23 @@
+[
+  {
+    "pipeline_step": "feature_extraction",
+    "input_path": "output/student_target_diagnosis/2_enself_rt20v",
+    "feature_params": {
+      "feature_set": [
+        "ratio_top_20_variants",
+        "epa_normalized_sequence_entropy_linear_forgetting",
+        "trace_length"
+      ]
+    },
+    "output_path": "output/student_target_evaluation/plots",
+    "real_eventlog_path": "data/BaselineED_feat.csv",
+    "plot_type": "boxplot"
+  },
+  {
+    "pipeline_step": "benchmark_test",
+    "benchmark_test": "discovery",
+    "input_path": "output/student_target_diagnosis/2_enself_rt20v",
+    "output_path": "output",
+    "miners": ["inductive", "heu", "imf"]
+  }
+]
