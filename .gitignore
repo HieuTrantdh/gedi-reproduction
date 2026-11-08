@@ -7,3 +7,11 @@ notebooks/.ipynb_checkpoints/*
 output/
 smac3_output/
 status/
+venv/
+log/
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc

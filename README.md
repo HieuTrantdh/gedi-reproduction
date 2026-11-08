@@ -441,6 +441,22 @@ This notebook is used to answer the question if there is a statistically signifi
 #### [Fig. 9 Consistency and fig. 10 Limitations](notebooks/gedi_figs9and10_consistency.ipynb)
 Likewise to the evaluation on the statistical tests in notebook `gedi_figs7and8_benchmarking_statisticalTests.ipynb`, this notebook is used to compute the differences between two correlation matrices $\Delta C = C_1 - C_2$. This logic is employed to evaluate and visualize the distance of two correlation matrices. Furthermore, we show how significant scores are retained from the correlations being evaluated on real-world datasets coompared to synthesized event log datasets with real-world targets. In Fig. 9 and 10 in the paper, the results of the notebook are shown. 
 
+### Student reproduction scope
+This fork includes a small-scale reproduction report and independent scripts:
+
+- `scripts/reproduce_fig4_5.py`: PCA and convex-hull analysis;
+- `scripts/reproduce_fig6.py`: Process Discovery benchmark boxplots;
+- `scripts/reproduce_fig7_8.py`: Pearson and Kendall correlation heatmaps;
+- `scripts/reproduce_fig9_10.py`: correlation differences and filtered significance.
+
+The reproduction uses the official feature and benchmark artifacts for Figs. 4--10
+and directly runs a representative small pipeline and benchmark. It does not claim
+to regenerate the complete real-target and grid-target experiments from scratch.
+The report also contains a limited extension: repeating a five-target entropy
+sweep to diagnose generation stability. The two runs produced XES logs for 4/5
+and 3/5 targets, respectively. This is a diagnostic observation, not a new
+generation algorithm or a claim about the full GEDI benchmark.
+
 ## Citation
 The `GEDI` framework is taken directly from the original paper by [Maldonado](mailto:andreamalher.works@gmail.com), Frey, Tavares, Rehwald and Seidl on BPM'24.
 
