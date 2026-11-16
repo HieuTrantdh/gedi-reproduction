@@ -1,0 +1,38 @@
+[
+  {
+    "pipeline_step": "event_logs_generation",
+    "targets": [
+      {
+        "log": "grid_enself_rt10v_e010_r040",
+        "epa_normalized_sequence_entropy_linear_forgetting": 0.1,
+        "ratio_top_10_variants": 0.4
+      },
+      {
+        "log": "grid_enself_rt10v_e020_r040",
+        "epa_normalized_sequence_entropy_linear_forgetting": 0.2,
+        "ratio_top_10_variants": 0.4
+      },
+      {
+        "log": "grid_enself_rt10v_e030_r040",
+        "epa_normalized_sequence_entropy_linear_forgetting": 0.3,
+        "ratio_top_10_variants": 0.4
+      }
+    ],
+    "config_space": {
+      "mode": [5, 20],
+      "sequence": [0.01, 1],
+      "choice": [0.01, 1],
+      "parallel": [0.01, 1],
+      "loop": [0.01, 1],
+      "silent": [0.01, 1],
+      "lt_dependency": [0.01, 1],
+      "num_traces": [10, 10001],
+      "duplicate": [0],
+      "or": [0]
+    },
+    "system_params": {
+      "n_trials": 20,
+      "output_path": "output/reproduction_grid_2obj_subset"
+    }
+  }
+]

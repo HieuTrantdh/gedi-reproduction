@@ -449,13 +449,18 @@ This fork includes a small-scale reproduction report and independent scripts:
 - `scripts/reproduce_fig7_8.py`: Pearson and Kendall correlation heatmaps;
 - `scripts/reproduce_fig9_10.py`: correlation differences and filtered significance.
 
-The reproduction uses the official feature and benchmark artifacts for Figs. 4--10
-and directly runs a representative small pipeline and benchmark. It does not claim
-to regenerate the complete real-target and grid-target experiments from scratch.
-The report also contains a limited extension: repeating a five-target entropy
-sweep to diagnose generation stability. The two runs produced XES logs for 4/5
-and 3/5 targets, respectively. This is a diagnostic observation, not a new
-generation algorithm or a claim about the full GEDI benchmark.
+The report directly runs a representative small pipeline and reruns a subset of
+the official two-objective grid-target experiment: three of the 121 target
+combinations, with 20 optimization trials per target. Two targets produced logs,
+which were passed through feature extraction. A Process Discovery benchmark on
+the full generated logs was attempted but did not complete, so no benchmark
+scores are reported for this grid-target subset. The report does not claim to
+regenerate the complete real-target and grid-target experiments from scratch.
+It also contains an experimental extension: repeating a five-target entropy
+sweep across 100 independent runs. The runs produced XES logs for 198/500 target
+attempts overall (39.6%), with per-target success rates between 35% and 44%.
+This measures variability for the tested configuration, not the full GEDI
+benchmark.
 
 ## Citation
 The `GEDI` framework is taken directly from the original paper by [Maldonado](mailto:andreamalher.works@gmail.com), Frey, Tavares, Rehwald and Seidl on BPM'24.

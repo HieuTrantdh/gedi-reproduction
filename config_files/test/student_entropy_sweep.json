@@ -3,6 +3,11 @@
     "pipeline_step": "event_logs_generation",
     "targets": [
       {
+        "log": "target_entropy_010",
+        "ratio_top_20_variants": 0.4,
+        "epa_normalized_sequence_entropy_linear_forgetting": 0.1
+      },
+      {
         "log": "target_entropy_020",
         "ratio_top_20_variants": 0.4,
         "epa_normalized_sequence_entropy_linear_forgetting": 0.2
@@ -16,6 +21,11 @@
         "log": "target_entropy_040",
         "ratio_top_20_variants": 0.4,
         "epa_normalized_sequence_entropy_linear_forgetting": 0.4
+      },
+      {
+        "log": "target_entropy_050",
+        "ratio_top_20_variants": 0.4,
+        "epa_normalized_sequence_entropy_linear_forgetting": 0.5
       }
     ],
     "config_space": {
@@ -32,7 +42,7 @@
     },
     "system_params": {
       "n_trials": 5,
-      "output_path": "output/student_target_diagnosis"
+      "output_path": "output/student_entropy_sweep_100/run_001"
     }
   }
 ]
